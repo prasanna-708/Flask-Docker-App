@@ -2,9 +2,9 @@ from flask import Flask
 
 app = Flask(__name__)
 
-@app.route('/')
-def home():
-    return "Hello from Docker Flask App 🚀"
+@app.route('/version')
+def version():
+    return {"version": "1.0.0"}
 
 @app.route('/health')
 def health():
